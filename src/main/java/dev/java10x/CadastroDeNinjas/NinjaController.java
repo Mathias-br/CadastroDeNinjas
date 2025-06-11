@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CadastroDeNinjasApplication {
+public class NinjaController {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CadastroDeNinjasApplication.class, args);
+		SpringApplication.run(NinjaController.class, args);
 	}
 
 
