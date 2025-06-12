@@ -1,7 +1,7 @@
-package dev.java10x.CadastroDeNinjas;
+package dev.java10x.CadastroDeNinjas.Ninjass;
 
+import dev.java10x.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @Entity
 //TODO JPA = Java Persiste API
@@ -12,10 +12,18 @@ public class NinjaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
-    String nome;
-    String email;
-    int idade;
+    private long id;
+
+    private String nome;
+    private String email;
+    private int idade;
+
+    // @ManyToOne  um ninja tem uma unica missão
+    @ManyToOne
+    @JoinColumn(name = "missoes_id") // foreina Key ou chave estrangeira
+    private MissoesModel missoes;
+
+    //private List<MissoesModel> missoes;
 
     public NinjaModel(){
 
