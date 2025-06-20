@@ -25,8 +25,8 @@ public class MissoesModel {
     @OneToMany(mappedBy = "missoes")
     private NinjaModel ninja;
 
-    public MissoesModel() {
-    }
+    //public MissoesModel() {
+    //}
 
 
 }
